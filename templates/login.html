@@ -1,0 +1,53 @@
+{% extends 'base.html'%}
+{% block content %}
+    <h3 style="border: 1px solid #eee;
+                border-radius: 2px;
+                padding: 0 50px;
+                text-align: center;
+                color: #da3636;
+                font-weight: bold;
+                ">Login
+
+    </h3>
+
+    <form method="POST" action="">{% csrf_token %}
+        <ul style="background-color: rgb(0,0,0); /* Fallback color */
+                    background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+                    color: white;
+                  font-weight: bold;
+                  border: 3px solid #f1f1f1;
+                  position: absolute;
+                  top: 50%;
+                  left: 50%;
+                  transform: translate(-50%, -50%);
+                  z-index: 2;
+                  width: 80%;
+                  padding: 20px;
+                  text-align: center;
+                    list-style:none;">
+       <li style="margin-bottom: 50px;">
+       <input type="text" name="username" placeholder="Username">
+
+       </li>
+        <li style="margin-bottom: 50px;">
+        <input type="text" name="password" placeholder="Enter Your Password">
+        </li>
+        <li style="margin-bottom: 50px;">
+        <input type="submit" name="log in">
+        </li>
+        <li style="color:black;
+                    font:italic;">
+            {{form.errors}}
+            {% for message in messages %}
+            <p>{{message}}</p>
+            {% endfor %}
+        </ul>
+
+
+
+    </form>
+    <div style="text-align:center;">
+                Don't have an account? <a href="{% url 'register' %}">Register</a>
+        </div>
+    {% endblock %}
+

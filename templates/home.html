@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,300italic,400italic,600italic">
+    <link rel="stylesheet" href="{% static 'font-awesome/css/font-awesome.min.css' %}">
+    <title>Movie Design</title>
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-container">
+            <div class="logo-container"><h1 class="logo">noload</h1></div>
+            <div class="menu-container">
+                <ul class="menu-list">
+                    <li class="menu-list-item-active">Home</li>
+                    <li class="menu-list-item">Movies</li>
+                    <li class="menu-list-item">Series</li>
+                    <li class="menu-list-item">Popular</li>
+                    <li class="menu-list-item">Trends</li>
+                </ul>
+            </div>
+            <div class="profile-container">
+                <img class="profile-picture" src="{% static 'img/milo.png' %}" alt="">
+                <div class="profile-text-container">
+                    <span class="profile-text">Profile</span>
+                    <i class="fa fa-caret-down dropdown"></i>
+                    <div class="dropdown-content">
+                        <ul class="logout-dropdown">
+                        <li>
+                            Hello {{request.user}}
+                            
+                        </li>
+                        <li>
+                            <a href="{% url 'logout'%}">Logout</a>
+                        </li>
+                        </ul>
+                    </div>
+                            
+
+
+
+
+
+                    </div>
+
+                </div>
+                <div class="toggle">
+                    <i class="fa fa-moon-o toggle-icon"></i>
+                    <i class="fa fa-sun-o toggle-icon"></i>
+                    <div class="toggle-ball"></div>
+                </div>
+            </div>
+        </div>
+
+    <div class="sidebar">
+        <i class="left-menu-icon fa fa-search"></i>
+        <i class="left-menu-icon fa fa-home"></i>
+        <i class="left-menu-icon fa fa-users"></i>
+        <i class="left-menu-icon fa fa-bookmark"></i>
+        <i class="left-menu-icon fa fa-hourglass-start"></i>
+        <i class="left-menu-icon fa fa-tv"></i>
+        <i class="left-menu-icon fa fa-shopping-cart"></i>
+    </div>
+    <div class="container">
+        <div class="content-container">
+            <div class="featured-content" style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('{% static 'img/savannah.png' %}');">
+            <img class="featured-title" src="{% static 'img/topgun.png' %}" alt="">
+            <p class="featured-desc">Lorem ipsum dolor sit amet consectetur adipisicing
+                 elit. Officia illum in, dolor quam pariatur vel vero impedit error corporis
+                  ullam aspernatur, quae eius dignissimos ex aliquam repellendus magni. Esse, tempore.</p>
+                  <button class="featured-button">WATCH TOPGUN</button>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">New Releases</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+
+
+                    </div>
+                    <i class="fa fa-chevron-right arrow" style="font-size: 100px;"></i>
+
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">New Releases</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                    </div>
+                    <i class="fa fa-chevron-right arrow" style="font-size: 100px;"></i>
+
+                </div>
+            </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">New Releases</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                    </div>
+                    <i class="fa fa-chevron-right arrow" style="font-size: 100px;"></i>
+
+                </div>
+            </div>
+            <div class="featured-content" style="background: linear-gradient(to bottom, rgba(0,0,0,0), #151515), url('{% static 'img/MILO.png' %}');">
+                <img class="featured-title" src="{% static 'img/MILO.png' %}" alt="">
+                <p class="featured-desc">Lorem ipsum dolor sit amet consectetur adipisicing
+                     elit. Officia illum in, dolor quam pariatur vel vero impedit error corporis
+                      ullam aspernatur, quae eius dignissimos ex aliquam repellendus magni. Esse, tempore.</p>
+                      <button class="featured-button">WATCH MORBIUS</button>
+                </div>
+            <div class="movie-list-container">
+                <h1 class="movie-list-title">New Releases</h1>
+                <div class="movie-list-wrapper">
+                    <div class="movie-list">
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                        <div class="movie-list-item">
+                            <img class="movie-list-item-img" src="{% static 'img/movie1.png' %}" alt="">
+                           <span class="movie-list-item-title">Yellowstone</span>
+                            <p class="movie-list-item-desc">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                            <button class="movie-list-item-button">Watch</button>
+                        </div>
+                    </div>
+                    <i class="fa fa-chevron-right arrow" style="font-size: 100px;"></i>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="{% static 'app.js' %}"></script>
+</body>
+</html>

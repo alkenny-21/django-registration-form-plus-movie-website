@@ -1,0 +1,54 @@
+{% extends 'base.html'%}
+{% block content %}
+    <h3 style="border: 1px solid #eee;
+                border-radius: 2px;
+                padding: 0 50px;
+                text-align: center;
+                color: #da3636;
+                font-weight: bold;
+                ">Register
+
+    </h3>
+
+    <form method="POST" action="">{% csrf_token %}
+        <ul style="border: 1px solid #eee;
+                border-radius: 2px;
+                padding: 0 50px;
+                background: lightgray;
+
+                text-align: center;
+                color: #da3636;
+                font-weight: bold;
+                list-style: none;">
+       <li style="margin-bottom: 50px;">
+        {{form.username.label}}
+        {{form.username}}
+       </li>
+        <li style="margin-bottom: 50px;">
+        {{form.email.label}}
+        {{form.email}}
+        </li>
+        <li style="margin-bottom: 50px;">
+        {{form.password1.label}}
+        {{form.password1}}
+        </li>
+        <li style="margin-bottom: 50px;">
+        {{form.password2.label}}
+        {{form.password2}}
+        </li>
+        <li style="margin-bottom: 50px;">
+        <input type="submit" name="Create User">
+        </li>
+            <li style="color:green;">{{form.errors}}</li>
+        </ul>
+
+        <div class="mb-4">
+            <div style="text-align:center;">
+                Already have an account? <a href="{% url 'login' %}">login</a>
+            </div>
+
+        </div>
+    </form>
+
+    {% endblock %}
+
